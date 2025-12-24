@@ -61,3 +61,19 @@ export interface FileInfo {
   url: string
   last_modified: string
 }
+
+export interface FileItem {
+  filename: string
+  path: string
+}
+
+export interface UpdateFilesRequest {
+  add_files: FileItem[]
+  remove_files: string[]
+  replace_all: boolean
+  replace_files: FileItem[]
+}
+
+export interface UpdateFilesResponse {
+  message: string
+}

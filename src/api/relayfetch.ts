@@ -4,6 +4,8 @@ import type {
   StatusResponse,
   GetConfigResponse,
   FileInfo,
+  UpdateFilesRequest,
+  UpdateFilesResponse,
 } from './types'
 const api = axios.create({
   baseURL: '/api',
@@ -33,3 +35,6 @@ export const updateConfig = (data: Partial<GetConfigResponse>) =>
 
 export const listFiles = () =>
   api.get<FileInfo[]>('/list_files')
+
+export const updateFiles = (data: UpdateFilesRequest) =>
+  api.post<UpdateFilesResponse>('/update_files', data)

@@ -5,8 +5,6 @@
       <RouterLink to="/">Dashboard</RouterLink>
       <RouterLink to="/config">Config</RouterLink>
       <RouterLink to="/files">Files</RouterLink>
-      <RouterLink to="/sync">Sync</RouterLink>
-      <RouterLink to="/maintenance">Maintenance</RouterLink>
     </aside>
 
     <main class="content">
