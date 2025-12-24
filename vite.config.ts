@@ -17,4 +17,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    port: 5173,
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:25667', // 后端默认地址
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 })
